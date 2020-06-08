@@ -1,0 +1,20 @@
+
+#持久层，mybatis
+mybatis:
+  configuration:
+    #开启驼峰命名
+    map-underscore-to-camel-case: true
+  #对应的实体类,配置别名
+  type-aliases-package: com.example.springboot.shiro.entity
+  #扫描mapper映射文件
+  mapper-locations: classpath:mapper/*.xml
+#单表的CRUD由mybatis自动完成
+
+spring:
+  #连接池
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    #url: jdbc:mysql://localhost:3306/springboot?characterEncoding=utf8
+    url: jdbc:mysql://localhost:3306/springboot?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: root

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:shiro="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+
+<h1 th:text="${user}">姓名</h1><br/>
+
+<div shiro:hasPermission="user:addPage">
+    用户添加页面：<a href="/user/addPage">用户添加</a>
+    <br/>
+</div>
+
+<div shiro:hasPermission="user:updatePage">
+    用户更新页面：<a href="/user/updatePage">用户更新</a>
+    <br/>
+</div>
+
+<div>
+    用户列表页面：<a href="/user/listPage">用户列表</a>
+</div>
+
+</body>
+</html>

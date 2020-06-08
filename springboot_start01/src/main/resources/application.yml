@@ -1,0 +1,89 @@
+#jdbc:
+#  driverClassName: com.mysql.jdbc.Driver
+#  url: jdbc:mysql://192.168.0.103/ssm?characterEncoding=utf-8
+#  username: root
+#  password: root
+
+#测试类型
+#  user:
+#    - name: zhangsan
+#      age: 21
+#    - name: wangwu
+#      age: 22
+
+
+
+
+#spring:
+#  mvc:
+#    view:
+#      prefix: /WEB-INF/pages
+#      suffix: .jsp
+  #拦截路径
+#  servlet:
+#    servlet:
+      #path: "*.html"
+
+
+
+spring:
+  #连接池
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    #url: jdbc:mysql://localhost:3306/springboot?characterEncoding=utf8
+    url: jdbc:mysql://localhost:3306/springboot?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: root
+
+
+
+      #   数据源其他配置
+#      initialSize: 5
+#      minIdle: 5
+#      maxActive: 20
+#      maxWait: 60000
+#      timeBetweenEvictionRunsMillis: 60000
+#      minEvictableIdleTimeMillis: 300000
+#      validationQuery: SELECT 1 FROM DUAL
+#      testWhileIdle: true
+#      testOnBorrow: false
+#      testOnReturn: false
+#      poolPreparedStatements: true
+      #   配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
+#      filters: stat,wall
+#      maxPoolPreparedStatementPerConnectionSize: 20
+#      useGlobalDataSourceStat: true
+#      connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+#      initialization-mode: always
+
+
+
+
+#持久层，mybatis
+mybatis:
+  configuration:
+    #开启驼峰命名
+    map-underscore-to-camel-case: true
+  #对应的实体类,配置别名
+  type-aliases-package: com.springboot.pojo
+#单表的CRUD由mybatis自动完成
+
+
+
+#修改默认端口
+server:
+  port: 8088
+
+#日志级别的控制
+#logging:
+#  level:
+    #控制点,键值对
+    #com.springboot: debug
+
+
+
+
+
+
+
+
